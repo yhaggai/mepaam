@@ -1,6 +1,4 @@
-import React from 'react';
-import { Global, css } from '@emotion/core'
-import Header from '../components/Header';
+import { css } from '@emotion/core'
 
 const globalStyle = css`
   @font-face {
@@ -19,6 +17,7 @@ const globalStyle = css`
   body {
     padding: 0;
     margin: 0;
+    direction: rtl;  
     font-size: 1.5rem;
     line-height: 2;
     font-family: 'radnika_next';
@@ -26,17 +25,8 @@ const globalStyle = css`
   a {
     text-decoration: none;
   }
+  h1,h2 {
+    margin: 0;
+  }
 `
-
-const Page = () => {
-  return (
-    <div>
-      <Global
-        styles={globalStyle}
-      />
-      <Header />
-    </div>
-  );
-};
-
-export default Page;
+export default globalStyle;
